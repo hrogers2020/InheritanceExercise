@@ -20,20 +20,31 @@ namespace Inheritance
             // give this class 4 members that are specific to Reptile
             // Set this class to inherit from your Animal Class
 
+            var myBird = new Bird();
+            myBird.WingColor = "White";
+            myBird.CanFly = true;
+            myBird.WillMigrate = true;
+            myBird.BeakLength = 3.5;
 
 
+            var lizard = new Reptile()
+            {
+                IsColdBlooded = true,
+                IsScaly = true,
+                Habitat = "swamp",
+                CanGrowTail = true
+            };
 
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
+            var myAnimals = new Animal[] { myBird, lizard };
 
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
+            foreach(var animal in myAnimals)
+            {
+                Console.WriteLine($"It has {animal.LegCount} legs");
+                Console.WriteLine($"Age:{animal.Age} years old");
+                Console.WriteLine($"The color of the animal is {animal.Color}");
+                Console.WriteLine($"Does it have a tail?: {animal.HasTail}");
+                Console.WriteLine($"");
+            }
         }
     }
 }
