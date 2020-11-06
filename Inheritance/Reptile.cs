@@ -8,12 +8,14 @@ namespace Inheritance
     {
         public Reptile()
         {
+            AnimalName = "Lizard";
             LegCount = 4;
             Age = 2;
             Color = "Green";
             HasTail = true;
         }
 
+        public string ReptileName { get; set; }
         public bool IsColdBlooded { get; set; }
         public bool IsScaly { get; set; }
         public string Habitat { get; set; }

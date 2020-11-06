@@ -21,6 +21,7 @@ namespace Inheritance
             // Set this class to inherit from your Animal Class
 
             var myBird = new Bird();
+            myBird.BirdName = "Dove";
             myBird.WingColor = "White";
             myBird.CanFly = true;
             myBird.WillMigrate = true;
@@ -29,6 +30,7 @@ namespace Inheritance
 
             var lizard = new Reptile()
             {
+                ReptileName = "Lizard",
                 IsColdBlooded = true,
                 IsScaly = true,
                 Habitat = "swamp",
@@ -39,6 +41,7 @@ namespace Inheritance
 
             foreach(var animal in myAnimals)
             {
+                Console.WriteLine($"{animal.AnimalName}:");
                 Console.WriteLine($"It has {animal.LegCount} legs");
                 Console.WriteLine($"Age:{animal.Age} years old");
                 Console.WriteLine($"The color of the animal is {animal.Color}");
